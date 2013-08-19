@@ -49,7 +49,7 @@
           lng: -71.804731,
           title: 'Worcester',
           infoWindow: {
-            content: '<p>Worcester Binding</p>'
+            content: '<p><a href="#worcester">Worcester Binding</a></p>'
           }
         });
 
@@ -58,7 +58,7 @@
           lng: -72.185669,
           title: 'Athol',
           infoWindow: {
-            content: '<p>Athol Binding</p>'
+            content: '<p><a href="#athol">Athol Binding</a></p>'
           }
         });
 
@@ -67,7 +67,7 @@
           lng: -71.633606,
           title: 'Blackstone',
           infoWindow: {
-            content: '<p>Blackstone Binding</p>'
+            content: '<p><a href="#blackstone">Blackstone Binding</a></p>'
           }
         });
 
@@ -76,7 +76,7 @@
           lng: -71.593180,
           title: 'Harvard',
           infoWindow: {
-            content: '<p>Harvard Binding</p>'
+            content: '<p><a href="#harvard">Harvard Binding</a></p>'
           }
         });
 
@@ -85,7 +85,7 @@
           lng: -72.192278,
           title: 'Warren',
           infoWindow: {
-            content: '<p>Warren Binding</p>'
+            content: '<p><a href="#warren">Warren Binding</a></p>'
           }
         });
       });
@@ -101,9 +101,9 @@
           <a class="brand" href="index.php"><img src="res/img/wpi_logo.jpg" class="navbar-logo" /></a>
           <ul class="nav">
             <li><a href="index.php">Home</a></li>
-            <li class="active"><a href="learn.php">Learn More</a></li>
+            <li><a href="learn.php">Learn More</a></li>
             <li><a href="#">Get Involved</a></li>
-            <li><a href="#">View Data</a></li>
+            <li class="active"><a href="#">View Data</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -137,7 +137,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr id="worcester">
                 <td>Laura Aurilio</td>
                 <td>Institute Park</td>
                 <td>Worcester</td>
@@ -152,7 +152,7 @@
                 <td>4</td>
                 <td>Yes</td>
               </tr>
-              <tr>
+              <tr id="athol">
                 <td>Laura Aurilio</td>
                 <td>Bearsden Conservation Park</td>
                 <td>Athol</td>
@@ -167,7 +167,7 @@
                 <td>4</td>
                 <td>Yes</td>
               </tr>
-              <tr>
+              <tr id="blackstone">
                 <td>Laura Aurilio</td>
                 <td>Blackstone Gorge</td>
                 <td>Blackstone</td>
@@ -182,7 +182,7 @@
                 <td>4</td>
                 <td>Yes</td>
               </tr>
-              <tr>
+              <tr id="harvard">
                 <td>Laura Aurilio</td>
                 <td>Ryan Land Fields</td>
                 <td>Harvard</td>
@@ -197,7 +197,7 @@
                 <td>4</td>
                 <td>Yes</td>
               </tr>
-              <tr>
+              <tr id="warren">
                 <td>Laura Aurilio</td>
                 <td>Lucy Stone Park</td>
                 <td>Warren</td>

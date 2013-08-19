@@ -21,6 +21,8 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="res/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="res/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="res/ico/favicon.png">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
 
   <body>
@@ -33,7 +35,7 @@
             <li><a href="index.php">Home</a></li>
             <li class="active"><a href="learn.php">Learn More</a></li>
             <li><a href="#">Get Involved</a></li>
-            <li><a href="#">View Data</a></li>
+            <li><a href="data.php">View Data</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -75,23 +77,5 @@
       </div>
 
     </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="res/js/jquery.js"></script>
-    <script src="res/js/bootstrap-transition.js"></script>
-    <script src="res/js/bootstrap-alert.js"></script>
-    <script src="res/js/bootstrap-modal.js"></script>
-    <script src="res/js/bootstrap-dropdown.js"></script>
-    <script src="res/js/bootstrap-scrollspy.js"></script>
-    <script src="res/js/bootstrap-tab.js"></script>
-    <script src="res/js/bootstrap-tooltip.js"></script>
-    <script src="res/js/bootstrap-popover.js"></script>
-    <script src="res/js/bootstrap-button.js"></script>
-    <script src="res/js/bootstrap-collapse.js"></script>
-    <script src="res/js/bootstrap-carousel.js"></script>
-    <script src="res/js/bootstrap-typeahead.js"></script>
-
   </body>
 </html>

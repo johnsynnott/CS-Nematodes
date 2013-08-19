@@ -1,3 +1,8 @@
+body {
+	border-top: 10px solid #AC2B37;
+}
+
+
 .navbar {
 	margin-top:20px;
 }
@@ -21,3 +26,12 @@
 #map {
 	height: 600px;
 }
+
+/* stop bootstrap from breaking google maps */
+#map img { 
+  max-width: none;
+}
+
+#map label { 
+  width: auto; display:inline; 
+} 
