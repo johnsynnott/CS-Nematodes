@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><?php echo $title; ?></title>
+    <title>Nematode Citizen Science</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -49,7 +49,7 @@
           lng: -71.804731,
           title: 'Worcester',
           infoWindow: {
-            content: '<p><a href="#worcester">Worcester Binding</a></p>'
+            content: '<p><a href="#worcester">Institute Park</a></p>'
           }
         });
 
@@ -58,7 +58,7 @@
           lng: -72.185669,
           title: 'Athol',
           infoWindow: {
-            content: '<p><a href="#athol">Athol Binding</a></p>'
+            content: '<p><a href="#athol"></a></p>'
           }
         });
 
@@ -98,14 +98,14 @@
     <div class="container">
       <div class="navbar">
         <div class="navbar-inner">
-          <a class="brand" href="index.php"><img src="res/img/wpi_logo.jpg" class="navbar-logo" /></a>
+          <a class="brand" href="index.html"><img src="res/img/wpi_logo.jpg" class="navbar-logo" /></a>
           <ul class="nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="learn.php">Learn More</a></li>
-            <li><a href="#">Get Involved</a></li>
-            <li class="active"><a href="#">View Data</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn More</a></li>
+            <li><a href="contribute.html">Get Involved</a></li>
+            <li class="active"><a href="data.html">View Data</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div><!-- /.navbar -->
@@ -117,6 +117,17 @@
             <noscript>You will need to enable JavaScript to view the map.</noscript>
           </div>
         </div>
+      </div>
+      <div class="row" style="margin-top:25px;">
+        <div class="span12">
+          <div class="well">
+            <p>If you often find yourself digging through the dirt, or you just want to help with a scientific endevor, you've come to the right place!</p>
+            <p>All of the data that we accumulate winds up right here.</p>
+            <a class="btn" href="#">Get involved &raquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="span12">
           <table id="DataTable" class="tablesorter">
             <thead>
@@ -216,6 +227,7 @@
           </table>
         </div>
       </div>
+    </div>
 
       <hr>
 
