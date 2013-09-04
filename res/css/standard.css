@@ -22,6 +22,16 @@ body {
 
 
 
+.biopic {
+	height: 130px;
+}
+
+
+
+
+
+
+
 
 #map {
 	height: 600px;
@@ -35,3 +45,12 @@ body {
 #map label { 
   width: auto; display:inline; 
 } 
+
+
+
+
+
+
+#contact-message {
+	height: 300px;
+}
