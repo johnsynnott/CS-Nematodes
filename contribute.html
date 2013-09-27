@@ -1,81 +1,224 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
+<head>
+    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org">
     <meta charset="utf-8">
+
     <title>Nematode Citizen Science</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <link href="res/css/bootstrap.css" rel="stylesheet">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <link href="res/css/bootstrap.css" rel="stylesheet" type="text/css"><!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="res/js/html5shiv.js"></script>
     <![endif]-->
-
-    <link href="res/css/standard.css" rel="stylesheet">
-
-    <!-- Fav and touch icons -->
+    <link href="res/css/standard.css" rel="stylesheet" type="text/css"><!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="res/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="res/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="res/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="res/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="res/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="res/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="res/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="res/ico/favicon.png">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+    $(function(){
+        $("a.animateScroll").bind("click", function (event) {
+            event.preventDefault ? event.preventDefault() : event.returnValue = false;
+            var target = $(this).attr("href");
+            $("html, body").stop().animate({
+                    scrollLeft: $(target).offset().left,
+                    scrollTop: $(target).offset().top
+                }, 1200);
+        });
+    });
+    </script>
+</head>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  </head>
-
-  <body>
-
+<body>
     <div class="container">
-      <div class="navbar">
-        <div class="navbar-inner">
-          <a class="brand" href="index.html"><img src="res/img/wpi_logo.jpg" class="navbar-logo" /></a>
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="learn.html">Learn More</a></li>
-            <li class="active"><a href="contribute.html">Get Involved</a></li>
-            <li><a href="data.html">View Data</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="index.html"><img src="res/img/wpi_logo.jpg" class="navbar-logo"></a>
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn More</a></li>
+                    <li class="active"><a href="contribute.html">Get Involved</a></li>
+                    <li><a href="data.html">View Data</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div><!-- /.navbar -->
+        <!-- Example row of columns -->
+
+        <div class="row">
+            <div class="span12">
+                <h2>We want your data</h2>
+                <p>One of the most important parts of any scientific research project is collecting as many data points as possible. We can do some ourselves, but to get a really clear picture we need the help of people like you. That's what this whole project is about!</p>
+            </div>
         </div>
-      </div><!-- /.navbar -->
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span12">
-          <h2>We want your data</h2>
-          <p>One of the most important parts of any scientific research project is collecting as many data points as possible. We can do some ourselves, but to get a really clear picture we need the help of people like you.</p>
+        
+        <div class="row">
+            <div class="span6">
+                <h4 class="">Collecting a soil Sample</h3>
+                <p>The first step to check for nematodes in a soil sample is to get a soil sample!</p>
+                <p>Collecting the sample is about as straightforward as it can get. Go to the location you want to test, and collect a few ounces of soil. Make sure that you put the soil that you collect into a well sealed container.</p>
+                <p>Make sure to not information about where you collect from, not just what you collect! A list of information that we would like you to include can be found <a href="#Needed_Data" class="animateScroll">here.</a></p>
+            </div>
+            <div class="span6">
+                <h4 class="">Analyzing your sample</h3>
+                <p>There are several methods for analyzing a sample once you have collected it.</p>
+                <p><a href="#Funnel_Extraction" class="animateScroll">The Baermann Funnel</a> is simple, and only requires household materials and time.</p>
+                <p><a href="#Agar_Extraction" class="animateScroll">Simple Planting Extraction</a> is simple and quick, but requires agar plates.</p>
+                <p><a href="#Centerfuge_Extraction" class="animateScroll">Sieving and Sucrose-Centrifugation</a> is the most effective method, but also requires a centerfuge.</p>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="span8">
-          <h2>What to include</h2>
-          <p>When you take the sample, make sure to include data about where you sampled from, including:</p>
-          <ul>
-            <li>Your name</li>
-            <li>The name of the area (if any)</li>
-            <li>City and state</li>
-            <li>Latitude and Longitude</li>
-            <li>Elevation</li>
-            <li>Date and time</li>
-            <li>Weather conditions and temperature</li>
-            <li>The number of samples you took</li>
-            <li>Whether or not you found nematodes.</li>
-          </ul>
-        </div>
+
+        <div class="row">
         <div class="span4">
-          <h2>How to send it</h2>
-          <p>Carrier pigeon only</p>
+                <div class="well well-large">
+                    <ul class="thumbnails">
+                        <li class="">
+                            <a href="#" class="thumbnail">
+                                <img alt="Funnel Apparatus" class="" src="res/img/funnel-extraction.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <b>Materials:</b>
+                    <ul>
+                        <li>Small Funnel</li>
+                        <li>Funnel holder (ring stand is ideal)</li>
+                        <li>Flexible tubing</li>
+                        <li>Clamp</li>
+                        <li>Filter Paper (coffee filters or Kimwipes work)</li>
+                        <li>Collection Vessel (Test tube, dish, or glass)</li>
+                        <li>pipette</li>
+                        <li>Your soil sample!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span8" id="Funnel_Extraction">
+                <h3>The Baermann Funnel</h3>
+                <p>The best method for at home use. It's easy to perform and can be done with household items. This is the longest extraction method, taking one to three days to complete.</p>
+                <ol>
+                    <li>Obtain the materials. Full list to the left.</li>
+                    <li>Assemble your apparatus, so it looks like the image on the left.
+                        <ol>
+                            <li>Attach the tubing to the end of the funnel.</li>
+                            <li>Mount the funnel in its holder.</li>
+                            <li>Put your clamp on the end of the tube.</li>
+                        </ol>
+                    </li>
+                    <li>Fit filter paper to the inside of the funnel.</li>
+                    <li>Place your soil sample into the funnel, on top of the filter paper.</li>
+                    <li>Add just enough water so that the soil is just shy of dripping.</li>
+                    <li>Let the sample sit for one to three days, adding water as needed.</li>
+                    <li>After a few days, the nematodes will have settled into the tube. Place your collection Vessel under the tube, and release the clamp</li>
+                </ol>
+            </div>
         </div>
-      </div>
+        
+        <div class="row">
+            <div class="span4">
+                <div class="well well-large">
+                    <ul class="thumbnails">
+                        <li class="">
+                            <a href="#" class="thumbnail">
+                                <img alt="Simple Planting Extraction" class="" src="res/img/SP-extraction.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <b>Materials:</b>
+                    <ul>
+                        <li>Agar Plates</li>
+                        <li>Your soil sample!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span8" id="Agar_Extraction">
+                <h3>Simple Planting Extraction</h3>
+                <p>Simple Planting Extraction is exactly what it says on the tin. It's the simplest way to extract nematodes, requiring only agar plates, and your sample. If you have the materials, this is an excellent method.</p>
+                <ol>
+                    <li>You will need two plates per sample.</li>
+                    <li>Assign each plate a label with the date and sample information</li>
+                    <li>Place one soil sample on two plates, so that one plate has more soil than the other. Make sure you can still see agar.</li>
+                    <li>Wait 10 minutes.</li>
+                    <li>Observe worms under microscope and transfer onto plates with E. coil as needed.</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span4">
+                <div class="well well-large">
+                    <ul class="thumbnails">
+                        <li class="">
+                            <a href="#" class="thumbnail">
+                                <img alt="Centerfuge Extraction" class="" src="res/img/centerfuge-extraction.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <b>Materials:</b>
+                    <ul>
+                        <li>Centerfuge</li>
+                        <li>Sugar</li>
+                        <li>Multiple sieves</li>
+                        <li>Your soil sample!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span8"  id="Centerfuge_Extraction">
+                <h3>Sieving and Sucrose-Centrifugation</h3>
+                <p>The Sieving and Sucrose-Centrifugation method is best used in a lab setting only. The materials are expensive and complicated, but if you have access, this method is fast and accurate.</p>
+                <ol>
+                    <li>Prepare a sucrose solution by dissolving sugar in water.</li>
+                    <li>Pass the soil sample through a coarse sieve to remove large debris.</li>
+                    <li>Mix the soil sample with water, and pass through stacked 20/500 - mesh sieves.</li>
+                    <li>Wash nematodes and silt left on the 500-mesh sieve into a centrifuge tube.</li>
+                    <li>Spin tube in centrifuge machine at 1700 RPM for 5 minutes. Allow to settle for 5 minutes.</li>
+                    <li>Remove water from tube until about 1cm is left above pellet and fill tube with sucrose solution. Mix well.</li>
+                    <li>Spin tube at 1000 RPM for 30 seconds.  Nematodes will be suspended in sucrose while any other particles are in the bottom of the tube.</li>
+                    <li>Pour sucrose through 635-mesh sieve and transfer nematodes on sieve into tubes or plates as desired</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" id="Needed_Data">
+                <h2>What to include</h2>
+                <p>When you take the sample, make sure to include data about where you sampled from, including:</p>
+                <ul>
+                    <li>Your name</li>
+                    <li>The name of the area (if any)</li>
+                    <li>City and state</li>
+                    <li>Latitude and Longitude</li>
+                    <li>Elevation</li>
+                    <li>Date and time</li>
+                    <li>Weather conditions and temperature</li>
+                    <li>The number of samples you took</li>
+                    <li>Whether or not you found nematodes.</li>
+                </ul>
+            </div>
+            <div class="span4">
+                <h2>How to send it</h2>
+                <p>The easiest way to contribute is to send your data to us by email.</p>
+                <p>Luckily, we have a <a href="contact.html">contact</a> page for just that!</p>
+                <p>Make sure to check the list to the left before submitting. If some is missing, your data may not show up.</p>
+            </div>
+        </div>
+        
+        
+        
+        <hr>
 
-      <hr>
-
-      <div class="footer">
-        <p>&copy; Nematodes and stuff 2013</p>
-      </div>
-
-    </div> <!-- /container -->
-  </body>
+        <div class="footer">
+            <p>&#169; Nematodes and stuff 2013</p>
+        </div>
+    </div><!-- /container -->
+</body>
 </html>
