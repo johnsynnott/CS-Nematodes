@@ -28,6 +28,19 @@ body {
 
 
 
+#splash_bg {
+	background-image: url('../img/bglogo.png');
+	background-size:340px 340px;
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+
+#splash_content {
+	opacity:1.0;
+}
+
+
+
 
 
 
