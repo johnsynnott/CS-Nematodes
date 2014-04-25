@@ -62,9 +62,16 @@
 		<script type="text/javascript">
 		$("#chart").on("click", ".editable", function(e) {
 			var content = $(this).text();
-			$(this).html('<input type="text" value="' + content + '"></input>');
+			$(this).html('<input id="editingElement" type="text" value="' + content + '"></input>');
 			$(this).removeClass("editable");
 			$(this).addClass("editing");
+		});
+
+		$("#chart").on("blur", ".editing", function(e) {
+			var content = $('#editingElement').val();
+			$(this).html(content);
+			$(this).removeClass("editing");
+			$(this).addClass("editable");
 		});
 
 		$("#DataTable").tablesorter();
