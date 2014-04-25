@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Editor</title>
+	<link href="res/css/table-theme.css" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="res/js/jquery.tablesorter.js"></script>
+	<script type="text/javascript">
+		var map;
+		$(document).ready(function(){
+
+			$.getJSON("map.json",function(points){
+
+				for(var pid = 0; pid < points.length; pid++) {
+					var p = points[pid];
+
+					var row = '<tr id="'+ pid +'">';
+					row += '<td class="editable">' + p.sampler + '</td>';
+					row += '<td class="editable">' + p.locName + '</td>';
+					row += '<td class="editable">' + p.city + '</td>';
+					row += '<td class="editable">' + p.state + '</td>';
+					row += '<td class="editable">' + p.latitude + '</td>';
+					row += '<td class="editable">' + p.longitude + '</td>';
+					row += '<td class="editable">' + p.elevation + '</td>';
+					row += '<td class="editable">' + p.date + '</td>';
+					row += '<td class="editable">' + p.sampleTime + '</td>';
+					row += '<td class="editable">' + p.weather + '</td>';
+					row += '<td class="editable">' + p.temperture + '</td>';
+					row += '<td class="editable">' + p.samples + '</td>';
+					row += '<td class="editable">' + p.nematodesFound + '</td>';
+					row += '<td class="editable">' + p.strains + '</td>';
+					row += '</tr>';
+
+					$("#chart").append(row);
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<table id="DataTable" class="tablesorter">
+			<thead>
+				<tr>
+					<th>Sampled By</th>
+					<th>Location</th>
+					<th>City</th>
+					<th>State</th>
+					<th>Latitude</th>
+					<th>Longitude</th>
+					<th>Elevation (m)</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Weather</th>
+					<th>Temperature (F)</th>
+					<th>Samples Collected</th>
+					<th>Nematodes Found</th>
+					<th>Strains Found</th>
+				</tr>
+			</thead>
+			<tbody id="chart">
+			</tbody>
+		</table>
+		<script type="text/javascript">
+		$("#chart").on("click", ".editable", function(e) {
+			alert("working!");
+			var content = $(this).text();
+			$(this).html('<input type="text" value="' + content + '"></input>');
+			$(this).removeClass("editable");
+			$(this).addClass("editing");
+		});
+
+		$("#DataTable").tablesorter();
+		</script>
+	</body>
+	</html>
