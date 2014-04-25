@@ -65,6 +65,7 @@
 			$(this).html('<input id="editingElement" type="text" value="' + content + '"></input>');
 			$(this).removeClass("editable");
 			$(this).addClass("editing");
+			$('editingElement').focus();
 		});
 
 		$("#chart").on("blur", ".editing", function(e) {
