@@ -61,7 +61,6 @@
 		</table>
 		<script type="text/javascript">
 		$("#chart").on("click", ".editable", function(e) {
-			alert("working!");
 			var content = $(this).text();
 			$(this).html('<input type="text" value="' + content + '"></input>');
 			$(this).removeClass("editable");
