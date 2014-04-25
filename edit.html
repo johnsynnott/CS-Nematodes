@@ -75,6 +75,15 @@
 			$(this).addClass("editable");
 		});
 
+		$("#chart").on("keypress", ".editing", function(e) {
+			if (e.which == 13) {
+				var content = $('#editingElement').val();
+				$(this).html(content);
+				$(this).removeClass("editing");
+				$(this).addClass("editable");
+			}
+		});
+
 		$("#DataTable").tablesorter();
 		</script>
 	</body>
