@@ -3,6 +3,10 @@
 	<title>Editor</title>
 	<link href="res/css/table-theme.css" rel="stylesheet">
 	<style type="text/css">
+	#JSONCont {
+		width: 99%;
+		height: 500px;
+	}
 	.remove {
 		color: #FF0000;
 	}
@@ -68,6 +72,11 @@
 		</table>
 		<input type="button" id="newRowButton" value="Add New Row" />
 		<input type="button" id="saveButton" value="Save" />
+		<input type="button" id="revertButton" value="Revert" />
+		<form>
+			<input type="submit" id="submitButton" value="Commit" />
+			<textarea id="JSONCont" name="compJSON"></textarea>
+		</form>
 		<script type="text/javascript">
 		$("#chart").on("click", ".editable", function(e) {
 			var content = $(this).text();
@@ -161,7 +170,7 @@
 			
 			JSON += "\n]";
 
-			console.log(JSON);
+			$("#JSONCont").val(JSON);
 		});
 
 		$("#chart").on("click", ".remove", function(e) {
