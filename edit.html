@@ -71,7 +71,7 @@
 			</tbody>
 		</table>
 		<input type="button" id="newRowButton" value="Add New Row" />
-		<form method="POST" action="http://users.wpi.edu/~john/cgi-bin/updatemap.pl">
+		<form id="mainForm" method="POST" action="http://users.wpi.edu/~john/cgi-bin/updatemap.pl">
 			<input type="password" id="subPass" name="password" />
 			<input type="submit" id="submitButton" value="Commit" />
 			<textarea id="JSONCont" name="compJSON"></textarea>
@@ -123,7 +123,10 @@
 			$("#chart").append(row);
 		});
 
-		$("#submitButton").click(function() {
+		$('form').submit(function(e) {
+			console.log('ran1');
+			//e.preventDefault();
+			console.log('ran2');
 			var JSON = "[";
 			var count = 0;
 			$("#chart").children("tr").each(function() {
@@ -168,8 +171,11 @@
 			});
 			
 			JSON += "\n]";
-
+			console.log('ran3');
 			$("#JSONCont").val(JSON);
+			console.log('ran4');
+			return true;
+			console.log('ran5');
 		});
 
 		$("#chart").on("click", ".remove", function(e) {

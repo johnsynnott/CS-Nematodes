@@ -62,6 +62,7 @@ sub genUploadInfoPage {
 	# Generate the first half of the body
 	print "<body>
 	<h3>$message</h3>
+	<p>Changes May take up to 30 seconds to show up</p>
 	<a href=\"http://users.wpi.edu/~john/nematode/data.html\">View map</a>
 	<a href=\"http://users.wpi.edu/~john/nematode/edit.html\">Go back to edit</a>";	# Display the message to the user
 
