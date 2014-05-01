@@ -116,28 +116,56 @@
 		});
 
 		$("#saveButton").click(function() {
+			var JSON = "[";
+			var count = 0;
+			$("#chart").children("tr").each(function() {
+				if (count == 0) {
+					JSON += "\n\t{";
+				} else {
+					JSON += ",\n\t{"
+				}
+				count++;
 
+				var sampler = $(this).find('.sampler').text();
+				var locName = $(this).find('.locName').text();
+				var city = $(this).find('.city').text();
+				var state = $(this).find('.state').text();
+				var latitude = $(this).find('.latitude').text();
+				var longitude = $(this).find('.longitude').text();
+				var elevation = $(this).find('.elevation').text();
+				var date = $(this).find('.date').text();
+				var sampleTime = $(this).find('.sampleTime').text();
+				var weather = $(this).find('.weather').text();
+				var temperture = $(this).find('.temperture').text();
+				var samples = $(this).find('.samples').text();
+				var nematodesFound = $(this).find('.nematodesFound').text();
+				var strains = $(this).find('.strains').text();
+
+				JSON += '\n\t\t"sampler": "' + sampler + '",';
+				JSON += '\n\t\t"locName": "' + locName + '",';
+				JSON += '\n\t\t"city": "' + city + '",';
+				JSON += '\n\t\t"state": "' + state + '",';
+				JSON += '\n\t\t"latitude": "' + latitude + '",';
+				JSON += '\n\t\t"longitude": "' + longitude + '",';
+				JSON += '\n\t\t"elevation": "' + elevation + '",';
+				JSON += '\n\t\t"date": "' + date + '",';
+				JSON += '\n\t\t"sampleTime": "' + sampleTime + '",';
+				JSON += '\n\t\t"weather": "' + weather + '",';
+				JSON += '\n\t\t"temperture": "' + temperture + '",';
+				JSON += '\n\t\t"samples": "' + samples + '",';
+				JSON += '\n\t\t"nematodesFound": "' + nematodesFound + '",';
+				JSON += '\n\t\t"strains": "' + strains + '"';
+
+				JSON += "\n\t}";
+			});
+			
+			JSON += "\n]";
+
+			console.log(JSON);
 		});
 
 		$("#chart").on("click", ".remove", function(e) {
 			$(this).parent().parent().remove();
-		});
-
-		$("#chart").children("tr").each(function() {
-			var sampler = $(this).find('sampler').text();
-			var locName = $(this).find('locName').text();
-			var city = $(this).find('city').text();
-			var state = $(this).find('state').text();
-			var latitude = $(this).find('latitude').text();
-			var longitude = $(this).find('longitude').text();
-			var elevation = $(this).find('elevation').text();
-			var date = $(this).find('date').text();
-			var sampleTime = $(this).find('sampleTime').text();
-			var weather = $(this).find('weather').text();
-			var temperture = $(this).find('temperture').text();
-			var samples = $(this).find('samples').text();
-			var nematodesFound = $(this).find('nematodesFound').text();
-			var strains = $(this).find('strains').text();
 		});
 
 		$("#DataTable").tablesorter();
