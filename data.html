@@ -32,7 +32,6 @@
     <script type="text/javascript">
       var map;
       $(document).ready(function(){
-        $("#DataTable").tablesorter();
         map = new GMaps({
           div: '#map',
           lat: 42.275642,
@@ -79,6 +78,7 @@
               }
             });
           }
+          $("#DataTable").tablesorter();
         });
       });
     </script>
