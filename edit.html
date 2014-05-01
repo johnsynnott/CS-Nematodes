@@ -2,6 +2,11 @@
 <head>
 	<title>Editor</title>
 	<link href="res/css/table-theme.css" rel="stylesheet">
+	<style type="text/css">
+	.remove {
+		color: #FF0000;
+	}
+	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="res/js/jquery.tablesorter.js"></script>
 	<script type="text/javascript">
@@ -13,21 +18,22 @@
 				for(var pid = 0; pid < points.length; pid++) {
 					var p = points[pid];
 
-					var row = '<tr id="'+ pid +'">';
-					row += '<td class="editable">' + p.sampler + '</td>';
-					row += '<td class="editable">' + p.locName + '</td>';
-					row += '<td class="editable">' + p.city + '</td>';
-					row += '<td class="editable">' + p.state + '</td>';
-					row += '<td class="editable">' + p.latitude + '</td>';
-					row += '<td class="editable">' + p.longitude + '</td>';
-					row += '<td class="editable">' + p.elevation + '</td>';
-					row += '<td class="editable">' + p.date + '</td>';
-					row += '<td class="editable">' + p.sampleTime + '</td>';
-					row += '<td class="editable">' + p.weather + '</td>';
-					row += '<td class="editable">' + p.temperture + '</td>';
-					row += '<td class="editable">' + p.samples + '</td>';
-					row += '<td class="editable">' + p.nematodesFound + '</td>';
-					row += '<td class="editable">' + p.strains + '</td>';
+					var row = '<tr class="dataRow" id="'+ pid +'">';
+					row += '<td class="editable sampler">' + p.sampler + '</td>';
+					row += '<td class="editable locName">' + p.locName + '</td>';
+					row += '<td class="editable city">' + p.city + '</td>';
+					row += '<td class="editable state">' + p.state + '</td>';
+					row += '<td class="editable latitude">' + p.latitude + '</td>';
+					row += '<td class="editable longitude">' + p.longitude + '</td>';
+					row += '<td class="editable elevation">' + p.elevation + '</td>';
+					row += '<td class="editable date">' + p.date + '</td>';
+					row += '<td class="editable sampleTime">' + p.sampleTime + '</td>';
+					row += '<td class="editable weather">' + p.weather + '</td>';
+					row += '<td class="editable temperture">' + p.temperture + '</td>';
+					row += '<td class="editable samples">' + p.samples + '</td>';
+					row += '<td class="editable nematodesFound">' + p.nematodesFound + '</td>';
+					row += '<td class="editable strains">' + p.strains + '</td>';
+					row += '<td class="removeCont"><a class="remove" href="#">X</a></td>';
 					row += '</tr>';
 
 					$("#chart").append(row);
@@ -54,11 +60,14 @@
 					<th>Samples Collected</th>
 					<th>Nematodes Found</th>
 					<th>Strains Found</th>
+					<th>Remove</th>
 				</tr>
 			</thead>
 			<tbody id="chart">
 			</tbody>
 		</table>
+		<input type="button" id="newRowButton" value="Add New Row" />
+		<input type="button" id="saveButton" value="Save" />
 		<script type="text/javascript">
 		$("#chart").on("click", ".editable", function(e) {
 			var content = $(this).text();
@@ -82,6 +91,53 @@
 				$(this).removeClass("editing");
 				$(this).addClass("editable");
 			}
+		});
+
+		$("#newRowButton").click(function() {
+			var row = '<tr class="dataRow">';
+			row += '<td class="editable sampler"></td>';
+			row += '<td class="editable locName"></td>';
+			row += '<td class="editable city"></td>';
+			row += '<td class="editable state"></td>';
+			row += '<td class="editable latitude"></td>';
+			row += '<td class="editable longitude"></td>';
+			row += '<td class="editable elevation"></td>';
+			row += '<td class="editable date"></td>';
+			row += '<td class="editable sampleTime"></td>';
+			row += '<td class="editable weather"></td>';
+			row += '<td class="editable temperture"></td>';
+			row += '<td class="editable samples"></td>';
+			row += '<td class="editable nematodesFound"></td>';
+			row += '<td class="editable strains"></td>';
+			row += '<td class="removeCont"><a class="remove" href="#">X</a></td>';
+			row += '</tr>';
+
+			$("#chart").append(row);
+		});
+
+		$("#saveButton").click(function() {
+
+		});
+
+		$("#chart").on("click", ".remove", function(e) {
+			$(this).parent().parent().remove();
+		});
+
+		$("#chart").children("tr").each(function() {
+			var sampler = $(this).find('sampler').text();
+			var locName = $(this).find('locName').text();
+			var city = $(this).find('city').text();
+			var state = $(this).find('state').text();
+			var latitude = $(this).find('latitude').text();
+			var longitude = $(this).find('longitude').text();
+			var elevation = $(this).find('elevation').text();
+			var date = $(this).find('date').text();
+			var sampleTime = $(this).find('sampleTime').text();
+			var weather = $(this).find('weather').text();
+			var temperture = $(this).find('temperture').text();
+			var samples = $(this).find('samples').text();
+			var nematodesFound = $(this).find('nematodesFound').text();
+			var strains = $(this).find('strains').text();
 		});
 
 		$("#DataTable").tablesorter();
