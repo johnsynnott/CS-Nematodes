@@ -15,7 +15,7 @@ use warnings;
 $CGI::POST_MAX = 1024 * 5000;							# max upload file size
 my $safe_chars = "a-zA-Z0-9_.-";						# valid filename characters	
 my $directory = "/home/john/public_html/nematode";
-my $filename = "map.json"		# upload directory
+my $filename = "map.json";		# upload directory
 
 my $cgi_query = new CGI;							# new CGI query
 print $cgi_query->header();							# print the CGI content header
@@ -61,7 +61,9 @@ sub genUploadInfoPage {
 
 	# Generate the first half of the body
 	print "<body>
-	<h3>$message</h3>";	# Display the message to the user
+	<h3>$message</h3>
+	<a href=\"http://users.wpi.edu/~john/nematode/data.html\">View map</a>
+	<a href=\"http://users.wpi.edu/~john/nematode/edit.html\">Go back to edit</a>";	# Display the message to the user
 
 	# Generate the rest of the page
 	print

@@ -71,9 +71,7 @@
 			</tbody>
 		</table>
 		<input type="button" id="newRowButton" value="Add New Row" />
-		<input type="button" id="saveButton" value="Save" />
-		<input type="button" id="revertButton" value="Revert" />
-		<form>
+		<form method="POST" action="http://users.wpi.edu/~john/cgi-bin/updatemap.pl">
 			<input type="password" id="subPass" name="password" />
 			<input type="submit" id="submitButton" value="Commit" />
 			<textarea id="JSONCont" name="compJSON"></textarea>
@@ -125,7 +123,7 @@
 			$("#chart").append(row);
 		});
 
-		$("#saveButton").click(function() {
+		$("#submitButton").click(function() {
 			var JSON = "[";
 			var count = 0;
 			$("#chart").children("tr").each(function() {
