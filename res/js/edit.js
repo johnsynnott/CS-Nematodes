@@ -78,7 +78,7 @@ $("#controlContainer").on("click", "#newRowButton", function() {
 
 $('form').submit(function(e) {
 	console.log('ran1');
-	e.preventDefault();
+	//e.preventDefault();
 	console.log('ran2');
 	var JSON = "[";
 	var count = 0;
