@@ -67,3 +67,32 @@ body {
 #contact-message {
 	height: 300px;
 }
+
+
+
+
+
+
+#mainForm {
+	display: inline;
+}
+
+#JSONCont {
+	width: 99%;
+	height: 500px;
+	visibility: hidden;
+}
+
+.editable {
+	border-left: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+}
+
+.editing {
+	border-left: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+}
+
+.remove {
+	color: #FF0000;
+}
